@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Quiz - Online Quiz Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Online Quiz Maker</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="quiz-list.html">Browse Quizzes</a>
+            <a href="create-quiz.html">Create Quiz</a>
+            <a href="login.html" id="login-link">Login</a>
+            <a href="register.html" id="register-link">Register</a>
+            <span id="user-info"></span>
+        </nav>
+    </header>
+    <main>
+        <form id="quiz-form">
+            <h2>Create a New Quiz</h2>
+            <label for="quiz-title">Quiz Title:</label>
+            <input type="text" id="quiz-title" required>
+            
+            <h3>Add Questions</h3>
+            <label for="question-text">Question:</label>
+            <textarea id="question-text" required></textarea>
+            
+            <label for="option1">Option 1:</label>
+            <input type="text" id="option1" required>
+            
+            <label for="option2">Option 2:</label>
+            <input type="text" id="option2" required>
+            
+            <label for="option3">Option 3:</label>
+            <input type="text" id="option3" required>
+            
+            <label for="option4">Option 4:</label>
+            <input type="text" id="option4" required>
+            
+            <label for="correct-answer">Correct Answer (1-4):</label>
+            <select id="correct-answer" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            
+            <button type="button" onclick="addQuestion()">Add Question</button>
+        </form>
+        
+        <div id="questions-preview">
+            <h3>Questions Added:</h3>
+            <ul id="question-list"></ul>
+        </div>
+        
+        <button onclick="saveQuiz()" class="btn">Save Quiz</button>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

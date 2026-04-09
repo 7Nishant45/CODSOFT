@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Quiz Maker</title>
+    <title>Take Quiz - Online Quiz Maker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,15 +19,13 @@
         </nav>
     </header>
     <main>
-        <section class="welcome">
-            <h2>Welcome to Online Quiz Maker!</h2>
-            <p>Create engaging quizzes or test your knowledge by taking existing ones.</p>
-            <div class="actions">
-                <a href="create-quiz.html" class="btn">Create a Quiz</a>
-                <a href="quiz-list.html" class="btn">Take a Quiz</a>
-            </div>
-        </section>
+        <div id="question-container">
+            <!-- Quiz questions will be loaded here -->
+        </div>
     </main>
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', loadQuiz);
+    </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Quiz Maker</title>
+    <title>Login - Online Quiz Maker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,14 +19,17 @@
         </nav>
     </header>
     <main>
-        <section class="welcome">
-            <h2>Welcome to Online Quiz Maker!</h2>
-            <p>Create engaging quizzes or test your knowledge by taking existing ones.</p>
-            <div class="actions">
-                <a href="create-quiz.html" class="btn">Create a Quiz</a>
-                <a href="quiz-list.html" class="btn">Take a Quiz</a>
-            </div>
-        </section>
+        <form id="login-form" onsubmit="loginUser(event)">
+            <h2>Login</h2>
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" required>
+            
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
     </main>
     <script src="script.js"></script>
 </body>
